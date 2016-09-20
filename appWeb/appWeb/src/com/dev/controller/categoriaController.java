@@ -59,8 +59,8 @@ public class categoriaController extends HttpServlet {
 
 			} else if (path.equals("/removec")) {
 				read(request, cmodel);
-				destino = "/deletc.jsp";
-			} else if (path.equals("/deletc")) {
+				destino = "/deletec.jsp";
+			} else if (path.equals("/deletec")) {
 				delete(request);
 				mensaje = list(request, cmodel);
 				destino = "/panelc.jsp";

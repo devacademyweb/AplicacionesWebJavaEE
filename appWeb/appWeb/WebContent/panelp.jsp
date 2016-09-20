@@ -70,7 +70,7 @@
 							<td>${p.precio}</td>
 							<td>${p.stock}</td>
 							<td>${p.imagen}</td>
-							<td>${p.cate.nombre}</td>
+							<td>${p.idcategoria.nombre}</td>
 							<td width=350><a class="btn" href="readp?id=${p.id }">Detalle</a>
 								&nbsp; <a class="btn btn-success" href="editp?id=${p.id}">Editar</a>
 								&nbsp; <a class="btn btn-danger" href="removep?id=${p.id}">Eliminar</a>

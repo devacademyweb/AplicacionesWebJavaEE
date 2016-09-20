@@ -54,7 +54,7 @@
 				<div class="control-group">
 					<label class="control-label"><b>NOMBRE</b></label>
 					<div class="controls">
-						<label></label><!-- TODo -->
+						<label>${requestScope.categoria.nombre}</label>
 					</div>
 				</div>
 

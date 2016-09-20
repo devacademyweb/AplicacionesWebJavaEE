@@ -116,7 +116,7 @@
 				<div class="form-actions">
 					<button type="submit" class="btn btn-success">Agregar</button>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a class="btn" href="listc">Cancelar</a>
+					<a class="btn" href="listp">Cancelar</a>
 				</div>
 			</form>
 		</div>

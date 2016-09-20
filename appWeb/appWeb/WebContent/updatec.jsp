@@ -52,7 +52,7 @@
 					<label class="control-label">CODIGO</label>
 					<div class="controls">
 						<input type="text" name="id" id="id"
-							value="" readonly /> <!-- TODO -->
+							value="${requestScope.categoria.id}" readonly />
 					</div>
 				</div>
 
@@ -62,7 +62,7 @@
 					<div class="controls">
 						<input type="text" name="nombre" id="nombre"
 							placeholder="Ingresar nombre"
-							value="" /> <!-- TODO -->
+							value="${requestScope.categoria.nombre}" /> 
 					</div>
 				</div>
 

@@ -57,9 +57,15 @@
 				</thead>
 				<tbody>
 
-
-
-					<!-- TODO -->
+					<c:forEach var="c" items="${requestScope.liscategorias}">
+					   <tr>
+					     <td>${c.id}</td>
+					     <td>${c.nombre}</td>
+					    <td width=350><a class="btn" href="readc?id=${c.id}">Detalle</a>
+								&nbsp; <a class="btn btn-success" href="editc?id=${c.id}">Editar</a>
+								&nbsp; <a class="btn btn-danger" href="removec?id=${c.id}">Eliminar</a>
+					   </tr>					
+					</c:forEach>
 
 				</tbody>
 			</table>
