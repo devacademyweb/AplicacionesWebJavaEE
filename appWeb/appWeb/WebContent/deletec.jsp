@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +15,8 @@
 </head>
 <title>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</title>
 </head>
-<body>
 
+<body>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -33,7 +32,7 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<h3>MANTENIMIENTO DE CATEGORIAS</h3>
+			<h3>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</h3>
 		</div>
 		<div class="row">
 			<div class="tabbable">
@@ -43,34 +42,23 @@
 			</div>
 		</div>
 		<div class="row">
-			<p style="text-align: right;">
-				<a href="newc" class="btn btn-success">Agregar</a>
-
-			</p>
-			<table class="table table-striped table-bordered">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>NOMBRE</th>
-						<th>ACCIONES</th>
-					</tr>
-				</thead>
-				<tbody>
-
-
-
-					<!-- TODO -->
-
-				</tbody>
-			</table>
+			<h3>Eliminar categoria</h3>
 		</div>
-
 		<div class="row">
-			<c:if test="${!empty requestScope.mensaje}">
-				<div>${requestScope.mensaje }</div>
-			</c:if>
+			<form class="form-horizontal" action="deletec" method="post">
+				<input type="hidden" name="id" value="${requestScope.categoria.id}" />
+				<p class="alert alert-error">
+					Esta seguro de eliminar esta categoria?<br /> <b>Nombre</b>:${requestScope.categoria.nombre}
+					<br />
+				</p>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-danger">Si eliminar</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn" href="listc">No eliminar</a>
+				</div>
+			</form>
 		</div>
 	</div>
-	<!-- /container -->
+
 </body>
 </html>

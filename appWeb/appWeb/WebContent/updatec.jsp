@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,6 @@
 <title>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</title>
 </head>
 <body>
-
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -33,44 +31,49 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<h3>MANTENIMIENTO DE CATEGORIAS</h3>
+			<h3>EDITAR CATEGORIA</h3>
 		</div>
 		<div class="row">
 			<div class="tabbable">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#" data-toggle="tab">Categorias</a></li>
+					<li class="active"><a href="panelc.html" data-toggle="tab">Categorias</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
-			<p style="text-align: right;">
-				<a href="newc" class="btn btn-success">Agregar</a>
-
-			</p>
-			<table class="table table-striped table-bordered">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>NOMBRE</th>
-						<th>ACCIONES</th>
-					</tr>
-				</thead>
-				<tbody>
-
-
-
-					<!-- TODO -->
-
-				</tbody>
-			</table>
+			<h3>Editar Categoria</h3>
 		</div>
+
 
 		<div class="row">
-			<c:if test="${!empty requestScope.mensaje}">
-				<div>${requestScope.mensaje }</div>
-			</c:if>
+			<form class="form-horizontal" action="updatec" method="post">
+
+				<div class="control-group">
+					<label class="control-label">CODIGO</label>
+					<div class="controls">
+						<input type="text" name="id" id="id"
+							value="" readonly /> <!-- TODO -->
+					</div>
+				</div>
+
+
+				<div class="control-group">
+					<label class="control-label">NOMBRE</label>
+					<div class="controls">
+						<input type="text" name="nombre" id="nombre"
+							placeholder="Ingresar nombre"
+							value="" /> <!-- TODO -->
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn-success">Actualizar</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn" href="listc">Cancelar</a>
+				</div>
+			</form>
 		</div>
 	</div>
-	<!-- /container -->
+
 </body>
 </html>

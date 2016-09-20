@@ -79,11 +79,13 @@ public class categoriaController extends HttpServlet {
 				request.removeAttribute("mensaje");
 			}
 
-			RequestDispatcher rd = request.getRequestDispatcher(destino);
-			rd.forward(request, response);
+			
 		} catch (SQLException e) {
 			// TODO: handle exception
 		}
+		
+		RequestDispatcher rd = request.getRequestDispatcher(destino);
+		rd.forward(request, response);
 
 	}
 
@@ -107,7 +109,7 @@ public class categoriaController extends HttpServlet {
 
 	protected void delete(HttpServletRequest request) throws ServletException, IOException, SQLException {
 		// TODO Auto-generated method stub
-		Categoria cate = new Categoria();
+		
 		int id = Integer.parseInt(request.getParameter("id"));
 
 		cmodel.EliminarCategoria(id);

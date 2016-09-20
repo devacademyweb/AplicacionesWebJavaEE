@@ -15,9 +15,9 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <title>UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</title>
+
 </head>
 <body>
-
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -33,7 +33,7 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<h3>MANTENIMIENTO DE CATEGORIAS</h3>
+			<h3>DETALLE DE CATEGORIA</h3>
 		</div>
 		<div class="row">
 			<div class="tabbable">
@@ -43,34 +43,27 @@
 			</div>
 		</div>
 		<div class="row">
-			<p style="text-align: right;">
-				<a href="newc" class="btn btn-success">Agregar</a>
-
-			</p>
-			<table class="table table-striped table-bordered">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>NOMBRE</th>
-						<th>ACCIONES</th>
-					</tr>
-				</thead>
-				<tbody>
-
-
-
-					<!-- TODO -->
-
-				</tbody>
-			</table>
+			<h3>Detalle de categoria</h3>
 		</div>
+
 
 		<div class="row">
-			<c:if test="${!empty requestScope.mensaje}">
-				<div>${requestScope.mensaje }</div>
-			</c:if>
+			<div class="form-horizontal">
+
+
+				<div class="control-group">
+					<label class="control-label"><b>NOMBRE</b></label>
+					<div class="controls">
+						<label></label><!-- TODo -->
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<a class="btn" href="listc">Regresar</a>
+				</div>
+			</div>
+
 		</div>
 	</div>
-	<!-- /container -->
 </body>
 </html>

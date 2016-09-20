@@ -33,18 +33,18 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<h3>MANTENIMIENTO DE CATEGORIAS</h3>
+			<h3>MANTENIMIENTO DE PELICULAS</h3>
 		</div>
 		<div class="row">
 			<div class="tabbable">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#" data-toggle="tab">Categorias</a></li>
+					<li class="active"><a href="#" data-toggle="tab">Peliculas</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
 			<p style="text-align: right;">
-				<a href="newc" class="btn btn-success">Agregar</a>
+				<a href="newp" class="btn btn-success">Agregar</a>
 
 			</p>
 			<table class="table table-striped table-bordered">
@@ -52,6 +52,10 @@
 					<tr>
 						<th>ID</th>
 						<th>NOMBRE</th>
+						<th>PRECIO</th>
+						<th>STOCK</th>
+						<th>IMAGEN</th>
+						<th>CATEGORIA</th>
 						<th>ACCIONES</th>
 					</tr>
 				</thead>
@@ -59,7 +63,18 @@
 
 
 
-					<!-- TODO -->
+					<c:forEach var="p" items="${requestScope.lispeliculas}">
+						<tr>
+							<td>${p.id}</td>
+							<td>${p.nombre}</td>
+							<td>${p.precio}</td>
+							<td>${p.stock}</td>
+							<td>${p.imagen}</td>
+							<td>${p.cate.nombre}</td>
+							<td width=350><a class="btn" href="readp?id=${p.id }">Detalle</a>
+								&nbsp; <a class="btn btn-success" href="editp?id=${p.id}">Editar</a>
+								&nbsp; <a class="btn btn-danger" href="removep?id=${p.id}">Eliminar</a>
+					</c:forEach>
 
 				</tbody>
 			</table>
