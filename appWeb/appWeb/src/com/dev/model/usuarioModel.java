@@ -16,7 +16,7 @@ public class usuarioModel {
 	}
 	
 	public Usuario inicioSesion(String correo,String password) throws SQLException{
-		Usuario u=udao.autenticar(correo, password);
+		Usuario u=udao.autentica(correo, password);
 		return u;
 	}
 	

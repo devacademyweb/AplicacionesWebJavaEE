@@ -12,12 +12,15 @@ import com.dev.dto.Usuario;
 
 public class Usuariodao implements IUsuariodao {
 
+	//
 	@Override
 	public void create(Usuario o) throws SQLException {
 		// TODO Auto-generated method stub
+		String insert = "{call sp_insert_usuario(?,?,?,?,?)}";
 		
-		String insert = "{call insert_usuario(?,?,?,?,?)}";
 		Connection cn = Dbconnection.getInstance();
+		
+		
 		cn.setAutoCommit(true);
 
 		CallableStatement cs = cn.prepareCall(insert);
@@ -27,6 +30,7 @@ public class Usuariodao implements IUsuariodao {
 		cs.setString(3, o.getNombres());
 		cs.setString(4, o.getCorreo());
 		cs.setString(5, o.getPassword());
+		
 
 		cs.execute();
 
@@ -36,13 +40,14 @@ public class Usuariodao implements IUsuariodao {
 		cs = null;
 
 		if (!estado.equals("ok")) {
-			throw new SQLException();
+			throw new SQLException(estado);
 		}
 
 	}
 
 	@Override
 	public void update(Usuario o) throws SQLException {
+		// TODO Auto-generated method stub
 
 	}
 
@@ -66,34 +71,36 @@ public class Usuariodao implements IUsuariodao {
 
 	@Override
 	public Usuario mapRow(ResultSet rs) throws SQLException {
-		// TODO Auto-generated method stub
-		Usuario u=new Usuario();
+		Usuario u = new Usuario();
 		u.setId(rs.getInt(1));
 		u.setApellidos(rs.getString(2));
 		u.setNombres(rs.getString(3));
 		u.setCorreo(rs.getString(4));
-		u.setAutorizacion(rs.getString(5));
+		u.setPassword(rs.getString(5));
 		u.setAutorizacion(rs.getString(6));
+
 		return u;
 	}
 
 	@Override
-	public Usuario autenticar(String correo, String password) throws SQLException {
-		// TODO Auto-generated method stub
+	public Usuario autentica(String correo, String password) throws SQLException {
+
+		String query = "{call sp_autentica_usuario(?,?)}";
+
+		Connection cn = Dbconnection.getInstance();
 		
-		String query="{call sp_autentica_usuario(?,?)}";
-		Connection cn=Dbconnection.getInstance();
-		
-		CallableStatement cs=cn.prepareCall(query);
-		
+
+		CallableStatement cs = cn.prepareCall(query);
 		cs.setString(1, correo);
 		cs.setString(2, password);
-		
-		ResultSet rs=cs.executeQuery();
-		if(rs.next()){
+
+		ResultSet rs = cs.executeQuery();
+		if (rs.next()) {
 			mapRow(rs);
 		}
+
 		return mapRow(rs);
+
 	}
 
 }

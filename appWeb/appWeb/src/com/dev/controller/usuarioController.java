@@ -48,6 +48,7 @@ public class usuarioController extends HttpServlet {
 				
 				if(u!=null){
 					session.setAttribute("usuario", u);
+					session.setAttribute("ID", session.getId());
 					switch (u.getAutorizacion()) {
 					case "ADMIN":
 						destino="paneladmin.jsp";						
@@ -76,6 +77,7 @@ public class usuarioController extends HttpServlet {
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getStackTrace());
 		}
 		
 		RequestDispatcher rd=request.getRequestDispatcher(destino);

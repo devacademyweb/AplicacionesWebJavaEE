@@ -97,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><i class="fa fa-phone" aria-hidden="true"></i> (+51) 123
 						345 653</li>
 					<li><a href="#" data-toggle="modal" data-target="#myModal">Iniciar
-							Sesi贸n</a></li>
+							Sesi髇</a></li>
 				</ul>
 			</div>
 			<div class="clearfix"></div>
@@ -122,33 +122,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="module form-module">
 								<div class="toggle">
 									<i class="fa fa-times fa-pencil"></i>
-									<div class="tooltip">Reg铆strate</div>
+									<div class="tooltip">Reg韘trate</div>
 								</div>
 								<div class="form">
-									<h3>Iniciar Sesi贸n</h3>
-									<form action="#" method="post">
-										<input type="text" name="Email"
-											placeholder="Direcci贸n de correo electronico" required="">
-										<input type="password" name="Password"
-											placeholder="Contrase帽a" required=""> <input
-											type="submit" value="Iniciar Sesi贸n">
+									<h3>Iniciar Sesi髇</h3>
+									<form action="login" method="post">
+										<input type="text" name="correo"
+											placeholder="Direcci髇 de correo electronico" required="">
+										<input type="password" name="password"
+											placeholder="Contrase馻" required=""> <input
+											type="submit" value="Iniciar Sesi髇">
 									</form>
 								</div>
 								<div class="form">
 									<h3>Registrarse</h3>
-									<form action="#" method="post">
-										<input type="text" name="Nombre"
+									<form action="insertu" method="post">
+										<input type="text" name="nombre"
 											placeholder="Nombre de usuario" required=""> <input
-											type="text" name="Apellido" placeholder="Apellido de usuario"
-											required=""> <input type="email" name="Email"
-											placeholder="Direcci贸n de correo electronico" required="">
-										<input type="password" name="Contrase帽a"
+											type="text" name="apellido" placeholder="Apellido de usuario"
+											required=""> <input type="email" name="correo"
+											placeholder="Direcci髇 de correo electronico" required="">
+										<input type="password" name="password"
 											placeholder="Password" required=""> <input
 											type="submit" value="Registrarse">
 									</form>
 								</div>
 								<div class="cta">
-									<a href="#">驴Olvidate tu nombre de usuario o contrase帽a?</a>
+									<a href="#">縊lvidaste tu nombre de usuario o contrase馻?</a>
 								</div>
 							</div>
 						</div>
