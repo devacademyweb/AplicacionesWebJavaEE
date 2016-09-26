@@ -2,8 +2,10 @@ package com.dev.factory;
 
 import com.dev.dao.ICategoriadao;
 import com.dev.dao.IPeliculadao;
+import com.dev.dao.IUsuariodao;
 import com.dev.dao.impl.Categoriadao;
 import com.dev.dao.impl.Peliculadao;
+import com.dev.dao.impl.Usuariodao;
 
 public class Factory {
 
@@ -27,5 +29,10 @@ public class Factory {
 	
 	public IPeliculadao getPeliculasdao(){
 		return new Peliculadao();
+	}
+	
+	public IUsuariodao getUsuariodao(){
+		return new Usuariodao();
+				
 	}
 }
